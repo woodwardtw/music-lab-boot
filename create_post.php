@@ -6,8 +6,8 @@ require_once( $parse_uri[0] . 'wp-load.php' );
 function makethepost() {
 // Create post object
 
-if(isset($_POST['postcategory'])){ $postcat = $_POST['postcategory']; } 
-if(isset($_POST['posttag'])){ $posttag = $_POST['posttag']; } 
+if(isset($_POST[strip_tags('postcategory')])){ $postcat = $_POST['postcategory']; } 
+if(isset($_POST[strip_tags('posttag')])){ $posttag = $_POST['posttag']; } 
 
 $location = site_url();
 

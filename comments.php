@@ -39,7 +39,7 @@
 							if ( has_post_thumbnail() ) {
 								the_post_thumbnail('thumbnail' , array( 'class' => 'alignleft' ));
 								} else { 
-									echo '<img src="'. site_url('/wp-content/themes/music-lab/images/default-thumb.jpg').'" class="alignleft" width="150" height="150" />';
+									echo '<img src="'. htmlspecialchars(site_url('/wp-content/themes/music-lab/images/default-thumb.jpg')).'" class="alignleft" width="150" height="150" />';
 								};							
 								echo '<h3>'.get_the_title().'</h3><p>';
 								echo the_excerpt().'</p></div></a>';
